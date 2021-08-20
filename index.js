@@ -20,6 +20,11 @@ var username = readlineSync.question(chalk.underline("Do you know F" + red + "R"
 console.log("")
 
 var score = 0;
+var highScore = [{
+	name: "Vaishnavi",
+	score : "5"
+}]
+
 function friendsQuiz(ques,i){
 	var temp=[];
 	temp[0]=opt(ques.a0)
@@ -40,9 +45,10 @@ function friendsQuiz(ques,i){
 	else{
 		console.log(chalk.hex('#C02621').bold("Incorrect Answer !"));
 	}
-	console.log("You scored " + score);
-	console.log("");
+	console.log("You scored " + score + "\n");
+	
 	}
+	
 	
 
 var loop = [{
@@ -76,10 +82,10 @@ var loop = [{
 },
 {
 	question: que.bold("When Ross and Rachel were“on a break,”Ross slept with Chloe. Where does she work? "),
-	a0: "Microsoft",
+	a0: "Cafe",
 	answer: "Xerox",
 	a1: "Dominos",
-	a2: "Bank of America"
+	a2: "PCO"
 	
 }
 ]
@@ -91,3 +97,4 @@ for(var i = 0; i<loop.length; i++){
 	friendsQuiz(ques,i)	
 }
 }
+console.log("High Score is " + highScore[0].score);
